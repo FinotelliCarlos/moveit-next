@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
+// o _app toda vez que o usuario acessa uma pagina diferente é reaproveitado porém é recalculado assim gerando um processamento a mais.
+// o arquivo _document é estático e será carregado somente uma vez, assim diminuindo o impacto de processamento.
 export default class MyDocument extends Document {
     render(){
         return (
