@@ -40,7 +40,7 @@ export function Countdown() {
             </div>
 
             {isActive ? (
-                <button type="button" className={styles.countdownButton} onClick={StartCountdown}>
+                <button type="button" className={`${styles.countdownButton} ${styles.countdownButtonActive}`} onClick={StartCountdown}>
                 Abandonar Ciclo
             </button>
             ) : (
