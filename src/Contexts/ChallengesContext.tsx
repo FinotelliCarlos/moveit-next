@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useState } from 'react';
-
+import challenges from '../../challenges.json';
 interface ChallengesContextData {
     startNewChallenge: () => void;
     level: number;
