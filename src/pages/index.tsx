@@ -8,6 +8,10 @@ import { Profile } from '../components/Profile'
 import { CountdownProvider } from "../Contexts/CountdownContext"
 import styles from '../styles/pages/Home.module.css'
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
+import usePersistedState from "../utils/usePersistedState"
+import dark from "../styles/Themes/dark"
+import light from "../styles/Themes/light"
 
 interface HomeProps {
   level: number;
@@ -16,30 +20,38 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme',dark)
+
+  const toggleTheme = () => {
+    setTheme(theme.title === 'dark' ? light : dark)
+  }
+
   return (
     <ChallengesProvider level={ props.level }
       currentExperience={ props.currentExperience}
       challengesCompleted={ props.challengesCompleted}
     >
-      <div className={styles.container}>
-        <Head>
-          <title>Inicio | move.it</title>
-        </Head>
-        <ExperienceBar />
+      <ThemeProvider theme={theme}>
+        <div className={styles.container}>
+          <Head>
+            <title>Inicio | move.it</title>
+          </Head>
+          <ExperienceBar />
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
+          <CountdownProvider>
+            <section>
+              <div>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </div>
+      </ThemeProvider>
     </ChallengesProvider>
   )
 }
