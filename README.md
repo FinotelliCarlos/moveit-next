@@ -14,7 +14,9 @@
 
 <h1>Executar</h1>
 <strong>Para executar o App</strong>
+
 <br>
+
 Para clonar o projeto:
 ```git
 git clone https://github.com/FinotelliCarlos/moveit-next.git
