@@ -5,6 +5,8 @@
 <p align="left">A Aplicação "Moveit" une a técnica de Pomodoro que "trás o conceito de trabalho e descanso para melhor desempenho com 25 minutos de atuação e 5 minutos de descanço"
  com a realização de exercícios para quem passa bastante tempo em frente do computador, assim exercitando seu corpo e olhos com as devidas atividades.</p>
  
+ <p>Esta aplicação foi desenvolvida durante a TrilhaReactJS realizada pela <a href="https://app.rocketseat.com.br/us/rocketseat">Rocketseat</a> na NLW#4 durante os dias 22/02 á 28/02 de 2021.</p>
+ 
  <h1>Tecnologias 🚀</h1>
  <strong>Aplicação desenvolvida utilizando as seguintes tecnologias:</strong>
  
