@@ -6,6 +6,7 @@
  com a realização de exercícios para quem passa bastante tempo em frente do computador, assim exercitando seu corpo e olhos com as devidas atividades.</p>
  
  <p>Esta aplicação foi desenvolvida durante a TrilhaReactJS realizada pela <a href="https://app.rocketseat.com.br/us/rocketseat">Rocketseat</a> na NLW#4 durante os dias 22/02 á 28/02 de 2021.</p>
+ <p>Foi um grande aprendizado em relação a aplicações Front-End, aonde foi detalhado conceitos sobre ContextAPI e React Hooks!</p>
  
  <h1>Tecnologias 🚀</h1>
  <strong>Aplicação desenvolvida utilizando as seguintes tecnologias:</strong>
