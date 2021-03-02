@@ -1,30 +1,36 @@
+import styled from "styled-components";
 
-.experienceBar{
+export const ExperienceBarHeader = styled.header`
     display: flex;
     align-items: center;
-}
+`
 
-.experienceBar span{
+export const ExperienceBarSpanInitial = styled.span`
     font-size: 1rem;
-}
+`
 
-.experienceBar > div{
+export const ExperienceBarPercent = styled.div`
     flex: 1;
     height: 4px;
     border-radius: 4px;
     background: var(--gray-line);
     margin: 0 1.5rem;
     position: relative;
-}
+`
 
-.experienceBar > div > div{
+export const ExperiencePercentCurrent = styled.div`
     height: 4px;
     border-radius: 4px;
     background: var(--green);
-}
+`
 
-span.currentExperience{
+export const ExperienceBarSpanPercent = styled.span`
+    font-size: 1rem;
     position: absolute;
     top: 12px;
     transform: translateX(-50%);
-}
+`
+export const ExperienceBarSpanFinish = styled.span`
+    font-size: 1rem;
+`
+
