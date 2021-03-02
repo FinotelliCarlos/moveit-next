@@ -1,6 +1,21 @@
 import { useContext } from 'react';
 import { CountdownContext } from '../Contexts/CountdownContext';
-import styles from '../styles/components/Countdown.module.css'
+import {
+    CountdownButton,
+    CountdownButtonActive,
+    CountdownButtonFinished,
+    CountdownContainer,
+    CountdownElementsFirst,
+    CountdownElementsLast,
+    CountdownSpanFirstPrimary,
+    CountdownSpanFirstSecond,
+    CountdownSpanLastPrimary,
+    CountdownSpanLastSecond,
+    CountdownButtonImageFinished,
+    CountdownButtonImageClose,
+    CountdownButtonImageStart,
+    CountdownDots
+} from '../styles/components/Countdown.components';
 
 export function Countdown() {
     const { minutes, secunds, hasFinished, isActive, startCountdown, resetCountdown } = useContext(CountdownContext);
@@ -11,36 +26,53 @@ export function Countdown() {
     //torna os segundos em string,se não houver 2 casas inserir zero,separa os segundos em array (esquerdo e direito)
 
     return (
-        <div>
-            <div className={styles.countdownContainer}>
-                <div>
-                    <span>{minuteLeft}</span>
-                    <span>{minuteRight}</span>
-                </div>
-                <span>:</span>
-                <div>
-                    <span>{secundLeft}</span>
-                    <span>{secundRight}</span>
-                </div>
-            </div>
+        <>
+            <CountdownContainer>
+                <CountdownElementsFirst>
+                    <CountdownSpanFirstPrimary>
+                        {minuteLeft}
+                    </CountdownSpanFirstPrimary>
+                    <CountdownSpanLastPrimary>
+                        {minuteRight}
+                    </CountdownSpanLastPrimary>
+                </CountdownElementsFirst>
+                <CountdownDots>:</CountdownDots>
+                <CountdownElementsLast>
+                    <CountdownSpanFirstSecond>{secundLeft}</CountdownSpanFirstSecond>
+                    <CountdownSpanLastSecond>{secundRight}</CountdownSpanLastSecond>
+                </CountdownElementsLast>
+            </CountdownContainer>
 
             {hasFinished ? (
-                <button disabled className={styles.countdownButton}>
-                    Ciclo Encerrado <img src="icons/checked.png" alt="Checked"/>
-                </button>
+                <CountdownButtonFinished disabled>
+                    Ciclo Encerrado
+                    <CountdownButtonImageFinished 
+                    src="icons/checked.png" 
+                    alt="Checked"/>
+                </CountdownButtonFinished>
             ) : (
-                <div>
+                <>
                 {isActive ? (
-                    <button type="button" className={`${styles.countdownButton} ${styles.countdownButtonActive}`} onClick={resetCountdown}>
-                        Abandonar Ciclo <img src="icons/closecount.svg" alt="Close"/>
-                    </button>
+                    <CountdownButtonActive 
+                    type="button" 
+                    onClick={resetCountdown}>
+                        Abandonar Ciclo 
+                        <CountdownButtonImageClose 
+                        src="icons/closecount.svg" 
+                        alt="Close"/>
+                    </CountdownButtonActive>
                 ) : (
-                    <button type="button" className={styles.countdownButton} onClick={startCountdown}>
-                        Iniciar um ciclo <img src="icons/play.svg" alt="Play"/>
-                    </button>
+                    <CountdownButton 
+                    type="button" 
+                    onClick={startCountdown}>
+                        Iniciar um ciclo 
+                        <CountdownButtonImageStart 
+                        src="icons/play.svg" 
+                        alt="Play"/>
+                    </CountdownButton>
                 )}
-                </div>
+                </>
             )}
-        </div>
+        </>
     )
 }
