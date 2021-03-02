@@ -8,6 +8,11 @@ import { Profile } from '../components/Profile'
 import { CountdownProvider } from "../Contexts/CountdownContext"
 import styles from '../styles/pages/Home.module.css'
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
+import { NavBarContainer } from "../components/NavBarContainer"
+import { DefaultTheme, ThemeProvider } from "styled-components"
+import usePersistedState from "../utils/usePersistedState"
+import dark from "../styles/Theme/dark"
+import light from "../styles/Theme/light"
 
 interface HomeProps {
   level: number;
@@ -16,30 +21,39 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme',dark)
+
+  const toggleTheme = () => {
+    setTheme(theme.title === 'dark' ? light : dark)
+  }
+
   return (
     <ChallengesProvider level={ props.level }
       currentExperience={ props.currentExperience}
       challengesCompleted={ props.challengesCompleted}
     >
-      <div className={styles.container}>
-        <Head>
-          <title>Inicio | move.it</title>
-        </Head>
-        <ExperienceBar />
-
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div className={styles.container}>
+          <Head>
+            <title>Inicio | move.it</title>
+          </Head>
+          <ExperienceBar />
+          <NavBarContainer />
+          <CountdownProvider>
+            <section>
+              <div>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </div>
+        </ThemeProvider>
     </ChallengesProvider>
   )
 }
