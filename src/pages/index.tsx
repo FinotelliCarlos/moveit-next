@@ -7,7 +7,7 @@ import { ExperienceBar } from "../components/ExperienceBar"
 import { Profile } from '../components/Profile'
 import { CountdownProvider } from "../Contexts/CountdownContext"
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
-import { NavBarContainer } from "../components/NavBarContainer"
+import { NavElements } from "../components/NavElements"
 import { DefaultTheme, ThemeProvider } from "styled-components"
 import usePersistedState from "../utils/usePersistedState"
 import dark from "../styles/Theme/dark"
@@ -39,7 +39,7 @@ export default function Home(props: HomeProps) {
             <title>Inicio | move.it</title>
           </Head>
           <ExperienceBar />
-          <NavBarContainer />
+          <NavElements />
           <CountdownProvider>
             <IndexSection>
               <div>

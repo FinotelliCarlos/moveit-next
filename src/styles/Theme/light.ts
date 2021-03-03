@@ -2,10 +2,12 @@ export default {
     title: 'light',
 
     colors: {
-        primary: '#adb5bd',
-        secundary: '#e9ecef',
-        background: '#f8f9fa',
-        text: '#202020'
+        primary: '#212529',
+        secundary: '#495057',
+        third: '#495000',
+        background: '#343a40',
+        text: '#e9ecef',
+        textimportant: '#e9ec00',
     },
 
     checktheme:{

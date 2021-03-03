@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components';
-import { NavContainer, NavLogo } from '../styles/components/NavBarContainer.components';
+import { NavContainer, NavLogo } from '../styles/components/NavElements.components';
 
 interface Props{
     toggleTheme(): void;
 }
 
-export function NavBarContainer({toggleTheme}) {
+export function NavElements({toggleTheme}) {
     const { checktheme, title } = useContext(ThemeContext);
     
     return (
