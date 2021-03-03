@@ -6,13 +6,13 @@ import { Countdown } from "../components/Countdown"
 import { ExperienceBar } from "../components/ExperienceBar"
 import { Profile } from '../components/Profile'
 import { CountdownProvider } from "../Contexts/CountdownContext"
-import styles from '../styles/pages/Home.module.css'
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
 import { NavBarContainer } from "../components/NavBarContainer"
 import { DefaultTheme, ThemeProvider } from "styled-components"
 import usePersistedState from "../utils/usePersistedState"
 import dark from "../styles/Theme/dark"
 import light from "../styles/Theme/light"
+import { IndexContainer, IndexSection } from "../styles/pages/Home.components"
 
 interface HomeProps {
   level: number;
@@ -34,14 +34,14 @@ export default function Home(props: HomeProps) {
       challengesCompleted={ props.challengesCompleted}
     >
       <ThemeProvider theme={theme}>
-        <div className={styles.container}>
+        <IndexContainer>
           <Head>
             <title>Inicio | move.it</title>
           </Head>
           <ExperienceBar />
           <NavBarContainer />
           <CountdownProvider>
-            <section>
+            <IndexSection>
               <div>
                 <Profile />
                 <CompletedChallenges />
@@ -50,9 +50,9 @@ export default function Home(props: HomeProps) {
               <div>
                 <ChallengeBox />
               </div>
-            </section>
+            </IndexSection>
           </CountdownProvider>
-        </div>
+        </IndexContainer>
         </ThemeProvider>
     </ChallengesProvider>
   )
@@ -60,7 +60,6 @@ export default function Home(props: HomeProps) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
 
   return {
     props: {

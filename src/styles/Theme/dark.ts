@@ -4,8 +4,10 @@ export default {
     colors: {
         primary: '#212529',
         secundary: '#495057',
+        third: '#495000',
         background: '#343a40',
-        text: '#e9ecef'
+        text: '#e9ecef',
+        textimportant: '#e9ec00',
     },
 
     checktheme:{
