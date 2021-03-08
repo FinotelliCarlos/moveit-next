@@ -14,8 +14,9 @@ export const CountdownElementsFirst = styled.div`
   align-items: center;
   justify-content: space-evenly;
   background: var(--white);
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #333;
+  border-radius:5px 5px 0 0;
   font-size: 8.5rem;
   text-align: center;
 `;
@@ -26,8 +27,9 @@ export const CountdownElementsLast = styled.div`
   align-items: center;
   justify-content: space-evenly;
   background: var(--white);
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #333;
+  border-radius:5px 5px 0 0;
   font-size: 8.5rem;
   text-align: center;
 `;
@@ -68,7 +70,7 @@ export const CountdownButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000;
+  border: 2px solid #333;
   border-radius: 5px;
   background: var(--blue);
   color: var(--white);
@@ -99,7 +101,7 @@ export const CountdownButtonActive = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #000;
+    border: 2px solid #333;
     border-radius: 5px;
     background: var(--white);
     color: var(--title);

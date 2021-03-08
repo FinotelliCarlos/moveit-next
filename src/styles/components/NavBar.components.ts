@@ -7,4 +7,6 @@ export const NavContainer = styled.div`
     gap: 1rem;
 `
 
-export const NavLogo = styled.img``
+export const NavLogo = styled.img`
+    max-width: 15rem;
+`

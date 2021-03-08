@@ -1,14 +1,14 @@
-import Head  from "next/head"
 import { GetServerSideProps } from 'next'
+import Head from "next/head"
 import { ChallengeBox } from "../components/ChallengeBox"
 import { CompletedChallenges } from "../components/CompletedChallenges"
 import { Countdown } from "../components/Countdown"
 import { ExperienceBar } from "../components/ExperienceBar"
+import { NavBar } from '../components/NavBar'
 import { Profile } from '../components/Profile'
-import { CountdownProvider } from "../Contexts/CountdownContext"
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
-import { NavElements } from "../components/NavElements"
-import { IndexContainer, IndexSection } from "../styles/pages/Home.components"
+import { CountdownProvider } from "../Contexts/CountdownContext"
+import { ContainerProfileCount, IndexContainer, IndexSection, HeadElements } from "../styles/pages/Home.components"
 
 interface HomeProps {
   level: number;
@@ -27,18 +27,24 @@ export default function Home(props: HomeProps) {
           <Head>
             <title>Inicio | move.it</title>
           </Head>
-          <ExperienceBar />
+          <HeadElements>
+            <NavBar />
+            <ExperienceBar />
+          </HeadElements>
+
           <CountdownProvider>
+
             <IndexSection>
-              <div>
+              <ContainerProfileCount>
                 <Profile />
                 <CompletedChallenges />
                 <Countdown />
-              </div>
+              </ContainerProfileCount>
               <div>
                 <ChallengeBox />
               </div>
             </IndexSection>
+
           </CountdownProvider>
         </IndexContainer>
     </ChallengesProvider>

@@ -38,8 +38,12 @@ export function Countdown() {
                 </CountdownElementsFirst>
                 <CountdownDots>:</CountdownDots>
                 <CountdownElementsLast>
-                    <CountdownSpanFirstSecond>{secundLeft}</CountdownSpanFirstSecond>
-                    <CountdownSpanLastSecond>{secundRight}</CountdownSpanLastSecond>
+                    <CountdownSpanFirstSecond>
+                        {secundLeft}
+                    </CountdownSpanFirstSecond>
+                    <CountdownSpanLastSecond>
+                        {secundRight}
+                    </CountdownSpanLastSecond>
                 </CountdownElementsLast>
             </CountdownContainer>
 
