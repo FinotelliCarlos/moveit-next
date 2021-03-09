@@ -25,7 +25,7 @@ export default function Home(props: HomeProps) {
     >
         <IndexContainer>
           <Head>
-            <title>Inicio | Time.xp</title>
+            <title>Time.xp</title>
           </Head>
           <HeadElements>
             <NavBar />
