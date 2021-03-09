@@ -13,7 +13,7 @@ export const IndexContainer = styled.div`
 export const HeadElements = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 `
 
 

@@ -4,7 +4,7 @@ export const NavContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 5rem;
 `
 
 export const NavLogo = styled.img`
