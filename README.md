@@ -1,8 +1,8 @@
-<h1 align="center"><img alt="timexp" title="timexp" src="public/logo2.svg" /></h1>
+<h1 align="center"><img alt="timexp" title="timexp" src="public/logo.svg" /></h1>
 
 
 <h1>Sobre 📄</h1>
-<p align="left">A Aplicação "Time Xp" une a técnica de Pomodoro que "trás o conceito de trabalho e descanso para melhor desempenho com 25 minutos de atuação e 5 minutos de descanço"
+<p align="left">A Aplicação "Time Xp" une a técnica de Pomodoro que "trás o conceito de trabalho e descanso para melhor desempenho com 25 minutos de atuação e 5 minutos de descanso"
  com a realização de exercícios para quem passa bastante tempo em frente do computador, assim exercitando seu corpo e olhos com as devidas atividades.</p>
  
  <p>Esta aplicação foi desenvolvida durante a TrilhaReactJS realizada pela <a href="https://app.rocketseat.com.br/us/rocketseat">Rocketseat</a> na NLW#4 durante os dias 22/02 á 28/02 de 2021.</p>
@@ -34,4 +34,5 @@ Para iniciar a aplicação:
 yarn dev
 ```
 
-A aplicação poderá ser acessada em [`localhost:3000`](http://localhost:3000).
+<span>A aplicação poderá ser acessada em [`localhost:3000`](http://localhost:3000).</span><br><br>
+<strong>Também é possivel acessar a aplicação através do link: [Time.xp](https://time-xp.vercel.app/).</strong>
