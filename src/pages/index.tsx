@@ -4,11 +4,10 @@ import { ChallengeBox } from "../components/ChallengeBox"
 import { CompletedChallenges } from "../components/CompletedChallenges"
 import { Countdown } from "../components/Countdown"
 import { ExperienceBar } from "../components/ExperienceBar"
-import { NavBar } from '../components/NavBar'
 import { Profile } from '../components/Profile'
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
 import { CountdownProvider } from "../Contexts/CountdownContext"
-import { ContainerProfileCount, IndexContainer, IndexSection, HeadElements } from "../styles/pages/Home.components"
+import { ContainerProfileCount, HeadElements, IndexContainer, IndexSection, EnvDivChallengBox } from "../styles/pages/Home.components"
 
 interface HomeProps {
   level: number;
@@ -17,36 +16,35 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-
   return (
     <ChallengesProvider level={ props.level }
       currentExperience={ props.currentExperience}
       challengesCompleted={ props.challengesCompleted}
     >
-        <IndexContainer>
-          <Head>
-            <title>Time.xp</title>
-          </Head>
-          <HeadElements>
-            <NavBar />
-            <ExperienceBar />
-          </HeadElements>
+          <IndexContainer>
+            <Head>
+              <title>Time.xp</title>
+            </Head>
+            <HeadElements>
+              <ExperienceBar />
+            </HeadElements>
 
-          <CountdownProvider>
+            <CountdownProvider>
 
-            <IndexSection>
-              <ContainerProfileCount>
-                <Profile />
-                <CompletedChallenges />
-                <Countdown />
-              </ContainerProfileCount>
-              <div>
-                <ChallengeBox />
-              </div>
-            </IndexSection>
+              <IndexSection>
+                <ContainerProfileCount>
+                  <Profile />
+                  <CompletedChallenges />
+                  <Countdown />
+                </ContainerProfileCount>
+                <EnvDivChallengBox>
+                  <ChallengeBox />
+                </EnvDivChallengBox>
+              </IndexSection>
 
-          </CountdownProvider>
-        </IndexContainer>
+            </CountdownProvider>
+          </IndexContainer>
+
     </ChallengesProvider>
   )
 }

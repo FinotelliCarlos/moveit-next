@@ -7,7 +7,7 @@ export const IndexContainer = styled.div`
     padding: 2.5rem 2rem;
 
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 `
 
 export const HeadElements = styled.div`
@@ -33,4 +33,16 @@ export const IndexSection = styled.section`
     gap: 6.25rem;
     align-content: center;
     
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 3rem 0;
+    }
+`
+
+export const EnvDivChallengBox = styled.div`
+    @media screen and (max-width: 768px){
+        margin-bottom: 5rem;
+    }
 `

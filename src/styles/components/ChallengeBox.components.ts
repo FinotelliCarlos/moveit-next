@@ -11,12 +11,21 @@ export const ChallengeBoxCountainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    @media screen and (max-width: 768px){
+        gap: 1rem;
+        margin: 1rem 0;
+    }
 `
 
 export const ChallengeActive = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 768px){
+        gap: 4rem;
+    }
 `
 
 export const ChallengeActiveHeader = styled.header`
@@ -33,6 +42,10 @@ export const ChallengeActiveMain = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 768px){
+        gap: 2rem;
+    }
 `
 
 export const ChallengeActiveImage = styled.img``
@@ -93,12 +106,20 @@ export const ChallengeNotActive = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 768px){
+        gap: 4rem;
+    }
 `
 
 export const ChallengeNotActiveStrong = styled.strong`
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
+`
+
+export const ChallengeNotActiveImg = styled.img`
+    margin-bottom: 4rem;
 `
 
 export const ChallengeNotActiveParagraph = styled.p`
@@ -108,8 +129,4 @@ export const ChallengeNotActiveParagraph = styled.p`
     line-height: 1.4;
     max-width: 70%;
     margin-top: 3rem;
-`
-
-export const ChallengeNotActiveImg = styled.img`
-    margin-bottom: 1rem;
 `
