@@ -1,18 +1,13 @@
 import { GetServerSideProps } from 'next'
 import Head from "next/head"
-import { DefaultTheme, ThemeProvider } from 'styled-components'
 import { ChallengeBox } from "../components/ChallengeBox"
 import { CompletedChallenges } from "../components/CompletedChallenges"
 import { Countdown } from "../components/Countdown"
 import { ExperienceBar } from "../components/ExperienceBar"
-import { Navbar } from '../components/Navbar'
 import { Profile } from '../components/Profile'
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
 import { CountdownProvider } from "../Contexts/CountdownContext"
-import usePersistedState from '../Contexts/usePersistedState'
-import { ContainerProfileCount, HeadElements, IndexContainer, IndexSection, EnvDivChallengBox } from "../styles/pages/Home.components"
-import dark from '../styles/Theme/dark'
-import light from '../styles/Theme/light'
+import { ContainerProfileCount, EnvDivChallengBox, HeadElements, IndexContainer, IndexSection } from "../styles/pages/Home.components"
 
 interface HomeProps {
   level: number;
@@ -21,11 +16,6 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme',dark)
-
-  const toggleTheme = () => {
-    setTheme(theme.title === 'dark' ? light : dark)
-  }
 
   return (
     <ChallengesProvider level={ props.level }
@@ -36,9 +26,7 @@ export default function Home(props: HomeProps) {
             <Head>
               <title>Time.xp</title>
             </Head>
-            <ThemeProvider theme={theme}>
               <HeadElements>
-                <Navbar toggleTheme={toggleTheme} />
                 <ExperienceBar />
               </HeadElements>
 
@@ -56,7 +44,6 @@ export default function Home(props: HomeProps) {
                 </IndexSection>
 
               </CountdownProvider>
-            </ThemeProvider>
           </IndexContainer>
 
     </ChallengesProvider>
