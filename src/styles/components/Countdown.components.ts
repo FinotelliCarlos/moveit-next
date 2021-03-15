@@ -13,9 +13,9 @@ export const CountdownElementsFirst = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: var(--white);
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid #333;
+  background: var(--countbg);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid #000;
   border-radius:5px 5px 0 0;
   font-size: 8.5rem;
   text-align: center;
@@ -26,34 +26,34 @@ export const CountdownElementsLast = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: var(--white);
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid #333;
+  background: var(--countbg);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid #000;
   border-radius:5px 5px 0 0;
   font-size: 8.5rem;
   text-align: center;
 `;
 
 export const CountdownSpanFirstPrimary = styled.span`
-  border-right: 1px solid #f8f1f3;
+  border-right: 1px solid #333;
   flex: 1;
   font-size: 6.25rem;
 `;
 
 export const CountdownSpanLastPrimary = styled.span`
-  border-left: 1px solid #f8f1f3;
+  border-left: 1px solid #333;
   flex: 1;
   font-size: 6.25rem;
 `;
 
 export const CountdownSpanFirstSecond = styled.span`
-  border-right: 1px solid #f8f1f3;
+  border-right: 1px solid #333;
   flex: 1;
   font-size: 6.25rem;
 `;
 
 export const CountdownSpanLastSecond = styled.span`
-  border-left: 1px solid #f8f1f3;
+  border-left: 1px solid #333;
   flex: 1;
   font-size: 6.25rem;
 `;

@@ -6,7 +6,7 @@ export const ExperienceBarHeader = styled.header`
 `
 
 export const ExperienceBarSpanInitial = styled.span`
-    font-size: 1rem;
+    font-size: 1.5rem;
 `
 
 export const ExperienceBarPercent = styled.div`
@@ -31,6 +31,7 @@ export const ExperienceBarSpanPercent = styled.span`
     transform: translateX(-50%);
 `
 export const ExperienceBarSpanFinish = styled.span`
-    font-size: 1rem;
+    font-size: 1.5rem;
+    color: var(--green);
 `
 

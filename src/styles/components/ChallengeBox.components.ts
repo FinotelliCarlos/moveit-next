@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ChallengeBoxCountainer = styled.div`
     height: 100%;
-    background: var(--white);
+    background: var(--cardbg);
     border-radius: 10px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
     padding: 1.5rem 2rem;
