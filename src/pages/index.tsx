@@ -4,7 +4,7 @@ import { ChallengeBox } from "../components/ChallengeBox"
 import { CompletedChallenges } from "../components/CompletedChallenges"
 import { Countdown } from "../components/Countdown"
 import { ExperienceBar } from "../components/ExperienceBar"
-import { NavBar } from '../components/Navbar'
+import { NavBar } from '../components/NavBar'
 import { Profile } from '../components/Profile'
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
 import { CountdownProvider } from "../Contexts/CountdownContext"
