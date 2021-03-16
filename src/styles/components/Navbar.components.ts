@@ -4,14 +4,15 @@ export const NavBarContainer = styled.div`
 @media screen and (min-width: 1115px){
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
 
     position: absolute;
     height: 100vh;
     width: 5rem;
-    padding: 1rem;
+    padding: 0 1rem;
     top: 0;
+    bottom: 0;
     left: 0;
 
     background: var(--cardbg);

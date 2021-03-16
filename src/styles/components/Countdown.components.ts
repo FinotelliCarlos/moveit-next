@@ -103,7 +103,7 @@ export const CountdownButtonActive = styled.button`
     justify-content: center;
     border: 2px solid #333;
     border-radius: 5px;
-    background: var(--white);
+    background: var(--if-btn);
     color: var(--title);
     font-size: 1.25rem;
     font-weight: 600;
@@ -111,7 +111,7 @@ export const CountdownButtonActive = styled.button`
     gap: .5rem;
 
     &:hover{
-    background: var(--red);
+    background: var(--if-hover);
     color: var(--white);
     }
 `
@@ -125,8 +125,8 @@ export const CountdownButtonFinished = styled.button`
     justify-content: center;
     border: 2px solid var(--green);
     border-radius: 5px;
-    background: var(--white);
-    color: var(--title);
+    background: var(--if-success);
+    color: #333;
     font-size: 1.25rem;
     font-weight: 600;
     transition: background-color .2s;

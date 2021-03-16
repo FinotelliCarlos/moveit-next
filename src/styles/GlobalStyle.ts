@@ -9,6 +9,9 @@ export const GlobalStyles = createGlobalStyle`
 
     :root {
         --white: #fff;
+        --if-btn: #c43a47;
+        --if-hover: #b3001b;
+        --if-success: #acf39d;
         --cardbg: #212529;
         --countbg: #343a40;
         --background: #343a40;
