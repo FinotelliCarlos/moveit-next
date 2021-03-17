@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { FiHome } from "react-icons/fi";
 
 export const NavBarContainer = styled.div`
 @media screen and (min-width: 1115px){
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
 
     position: absolute;
@@ -20,7 +21,21 @@ export const NavBarContainer = styled.div`
 }
 `
 export const NavLogo = styled.img`
+    position: absolute;
+    margin-top: 2rem;
+    top: 0;
+    width: 3rem;
+
 @media screen and (max-width: 1115px){
     display: none;
 }
+`
+
+export const NavHome = styled(FiHome)`
+    color: var(--title);
+    
+    &:hover{
+        color: var(--blue-dark);
+        cursor: not-allowed;
+    } 
 `
